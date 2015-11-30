@@ -1,0 +1,103 @@
+<ion-view view-title="Registration" cache-view="false">
+  <ion-content>
+
+    <div class="list">
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Number</span>
+        <input type="number" ng-model="reg.MSISDN" placeholder="NUMBER" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Name</span>
+        <input type="text" ng-model="reg.NAME" placeholder="Full Name" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Age</span>
+        <input type="number" ng-model="reg.AGE" placeholder="Age" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">National Id</span>
+        <input type="number" ng-model="reg.NID" placeholder="NID" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Nominee Name</span>
+        <input type="text" placeholder="Nominee Name" ng-model="reg.NNAME" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Nominee Age</span>
+        <input type="number" placeholder="Nominee Age" ng-model="reg.NAGE" required>
+      </label>
+
+
+      <div class="list">
+
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Nominee Relation
+          </div>
+          <select ng-model="reg.RELATION">
+            <option>Son</option>
+            <option>Daughter</option>
+            <option>Brother</option>
+            <option>Sister</option>
+            <option>Father</option>
+            <option>Mother</option>
+            <option>Husband</option>
+            <option>Wife</option>
+          </select>
+        </label>
+
+      </div>
+
+      <div class="list">
+
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Insurance Coverage
+          </div>
+          <select ng-model="reg.INSURANCE_PACK">
+            <option value="1">(Insurance Type:Islamic Life Insurance),
+              (Insurance Value:15000)</option>
+            <option value="2">(Insurance Type:Islamic Life Insurance),
+              (Insurance Value:20000)</option>
+            <option value="3">(Insurance Type:Islamic Life Insurance),
+              (Insurance Value:30000)</option>
+            <option value="4">(Insurance Type:Islamic Life Insurance),
+              (Insurance Value:50000)</option>
+            <option value="5">(Insurance Type:Islamic Life Insurance),
+              (Insurance Value:100000)</option>
+            <option value="6">(Insurance Type:Islamic Life Insurance),
+              (Insurance Value:1000000)</option>
+            <option value="7">(Insurance Type:General Life Insurance),
+              (Insurance Value:15000)</option>
+            <option value="8">(Insurance Type:General Life Insurance),
+              (Insurance Value:20000)</option>
+            <option value="9">(Insurance Type:General Life Insurance),
+              (Insurance Value:30000)</option>
+            <option value="10">(Insurance Type:General Life Insurance),
+              (Insurance Value:50000)</option>
+            <option value="11">(Insurance Type:General Life Insurance),
+              (Insurance Value:100000)</option>
+            <option value="12">(Insurance Type:General Life Insurance),
+              (Insurance Value:1000000)</option>
+            <option value="13">(Insurance Type:No Pacakage),
+              (Insurance Value:0)</option>
+          </select>
+        </label>
+
+      </div>
+
+
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Registration Date</span>
+        <input type="datetime" ng-model="reg.REGISTRATION_DATE" placeholder="Registration Date"  required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Activation Date</span>
+        <input type="datetime" ng-model="reg.ACTIVATION_DATE" placeholder="Activation Date" required>
+      </label>
+
+      <button class="button icon-left ion-android-add-circle button-positive button-full" ng-click="registering(reg)">Register</button>
+    </div>
+
+  </ion-content>
+</ion-view>

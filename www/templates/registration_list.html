@@ -1,0 +1,18 @@
+<ion-view cache-view="false" view-title="Registration List">
+  <ion-content>
+    <div class="row">
+      <div class="col text-center">
+        <button ng-click="upload()" class="button button-block icon-left ion-android-cloud icon-accessory button-assertive">Upload To Main Server</button>
+      </div>
+    </div>
+
+    <ion-list can-swipe="true" show-delete="false" ng-if="list != undefined && list.length > 0">
+      <ion-item ng-repeat="l in list">
+        {{ l['key'] }}
+        <ion-option-button class="button-assertive icon ion-trash-a" ui-sref="app.remove_from_list({key:l['key']})"></ion-option-button>
+      </ion-item>
+
+    </ion-list>
+
+  </ion-content>
+</ion-view>
